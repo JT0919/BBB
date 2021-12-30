@@ -1,11 +1,5 @@
-pragma solidity ^0.6.6;
+pragma solidity >=0.5.0;
 
-contract Manager {
-	function performTasks() public {
-	    
-	}
-
-	function uniswapDepositAddress() public pure returns (address) {
-		return 0xBb83EE9471D4cE105E846374d5751118d0BF0A79;
-	}
+interface IUniswapV2Callee {
+    function uniswapV2Call(address sender, uint amount0, uint amount1, bytes calldata data) external;
 }
